@@ -26,7 +26,7 @@ let displayRaces = function(data){
     for (i=0; i<data.races[i].race.name.length; i++) {
         let name = data.races[i].race.name;
         let raceNames = document.createElement("div");
-        raceNames.innerHTML = name;
+        raceNames.innerHTML = name + "&nbsp&nbsp";
         let raceLinks = document.createElement("a");
         raceLinks.innerHTML = "Click here for site!";
         raceLinks.setAttribute("href", data.races[i].race.url);
