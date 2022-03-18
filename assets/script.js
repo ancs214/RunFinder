@@ -1,9 +1,12 @@
 
 let resultsEl = document.querySelector("#results");
+let userFormEl = document.querySelector("#user-form");
+let raceSearchEl = document.querySelector("#race-search");
 
 
-let getRaces = function(){
-    let apiUrl = "https://cors-anywhere.herokuapp.com/https://runsignup.com/Rest/races?format=json&events=T&race_headings=F&race_links=T&include_waiver=F&include_multiple_waivers=F&include_event_days=F&include_extra_date_info=F&page=1&results_per_page=20&sort=name+ASC&start_date=today&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&city=Columbus&state=OH&event_type=running_race&distance_units=K&radius=50";
+let getRaces = function(searchInput){
+    //modify apiUrl to include zipcode search input
+    let apiUrl = "https://cors-anywhere.herokuapp.com/https://runsignup.com/Rest/races?format=json&events=T&race_headings=T&race_links=T&include_waiver=F&include_multiple_waivers=F&include_event_days=T&include_extra_date_info=F&page=2&results_per_page=10&sort=date+ASC&start_date=today&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&country=US&event_type=running_race&distance_units=K&zipcode=" + searchInput + "&radius=50";
     fetch(apiUrl)
     .then(function(response) {
         console.log(response);
@@ -11,6 +14,7 @@ let getRaces = function(){
                 response.json()
                 .then(function(data) {
                     console.log(data);
+                    //plug data into displayRaces function
                     displayRaces(data);
                    
                 })
@@ -18,12 +22,11 @@ let getRaces = function(){
         })
 }
 
-getRaces();
 
 
-
+//function to display race events
 let displayRaces = function(data){
-    for (i=0; i<data.races[i].race.name.length; i++) {
+    for (let i=0; i<data.races.length; i++) {
         let name = data.races[i].race.name;
         let raceNames = document.createElement("div");
         raceNames.innerHTML = name + "&nbsp&nbsp";
@@ -34,9 +37,27 @@ let displayRaces = function(data){
         resultsEl.appendChild(raceNames);
     }
 }
-
+// data.races[i].race.name.length
         
+let formSubmitHandler = function(event){
+    //prevent default reloading of page
+    event.preventDefault();
+    //obtain text input for zip code searched for; trim any space around
+    let searchInput = raceSearchEl.value.trim();
+    if (searchInput) {
+        getRaces(searchInput);
+        //clear search form after hitting submit
+        userFormEl.reset();
+    } 
+    //place else statement here for blank or invalid input
+}
 
+
+//on form submit, run formSubmitHandler function to obtain zip code
+userFormEl.addEventListener("submit", formSubmitHandler)
+
+
+//pass in zip code to getRaces function
 
 
 
