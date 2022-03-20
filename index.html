@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+    
+</head>
+
+<body>
+    <header>
+        <div>
+            <div>
+                <h1>WEBSITE NAME</h1>
+            </div>
+
+            <div>
+                <nav> Nav links</nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <div>
+                <h2>Search by zipcode:</h2>
+                <form id="user-form">
+                    <input type="text" id="race-search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div>
+                <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
+                <button class="button is-large">Button</button>
+
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div>
+            <div>
+                <h2>Run Results</h2>
+            </div>
+            <div id="results">
+
+            </div>
+        </div>
+        <div>
+            <div>
+                <h2>weather Results</h2>
+            </div>
+
+            <div>
+                <p>weather card</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!-- had to move script to bottom of page; it was causing >6 second load times after user search -->
+    <script src='/assets/script.js'></script>
+</body>
