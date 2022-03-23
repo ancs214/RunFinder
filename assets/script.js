@@ -65,4 +65,8 @@ let formSubmitHandler = function(event) {
 userFormEl.addEventListener("submit", formSubmitHandler)
 
 
+<<<<<<< HEAD
 //pass in zip code to getRaces function
+=======
+//pass in zip code to getRaces function
+>>>>>>> bbf34a34b2340ce6122c128e5d3a09458e4b7a24
