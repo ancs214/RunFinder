@@ -12,54 +12,7 @@
 </head>
 
 <body>
-    <header>
-            <div>
-                <h1>WEBSITE NAME</h1>
-            </div>
-            <div>
-                <nav> Nav links</nav>
-            </div>
-    </header>
-
-    <section>
-            <div>
-                <h2>Search by zipcode:</h2>
-                <form id="user-form">
-                    <input class="input" placeholder="Enter Zipcode" type="text" id="race-search">
-                    <button class="button is-primary" type="submit">Search</button>                  
-                </form>
-            </div>
-    </section>
-
-    <main class="columns tile is-parent">
-        <div class="column tile is-child is-primary">
-            <div>
-                <h2>Run Results</h2>
-            </div>
-            <div id="results">
-
-            </div>
-        </div>
-        <div class="column tile is-child is-primary">
-            <div>
-                <h2>weather Results</h2>
-            </div>
-
-            <div>
-                <p>weather card</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-    </footer>
-
-    <div class="container">
-
-        <!-- NAVBAR -->
-        <div class="block">
-
-            <nav class="navbar level">
+        <nav class="navbar level">
                 <div class="nav-left">
                     <a href="#" class="nav-item">
                         <h1 class="title is-4">RunFinder</h1>
@@ -80,6 +33,17 @@
             </nav>
         </div>
 
+    <header>
+            <div>
+                <h1>WEBSITE NAME</h1>
+            </div>
+            <div>
+                <nav> Nav links</nav>
+            </div>
+    </header>
+
+    <section>
+            
         <div class="block" style="width: 40%;">
             <h2>Search by zipcode:</h2>
             <form id="user-form" class="level">
@@ -87,18 +51,17 @@
                 <button class="button is-primary" type="submit">Search</button>
             </form>
         </div>
+    </section>
 
-        <div class="level">
+    <main class="columns tile is-parent">
+        <div class="column tile is-child is-primary">
+            <div class="level">
             <div class="level-item">
                 <h2>Run Results</h2>
             </div>
             <div class="level-item">
                 <h2>Weather Results</h2>
-            </div>
-        </div>
-
-
-        <div class="block columns tile is-parent">
+          <div class="block columns tile is-parent">
             <div class="box columns tile is-child">
                 <div id="results">
 
@@ -110,8 +73,23 @@
             </div>
 
         </div>
+    </main>
+
+              <div class="container">
+
+     
+        <div class="block">
+
+
+      
+
+          
     </div>
 
-    <!-- had to move script to bottom of page; it was causing >6 second load times after user search -->
+
+   
     <script src='./assets/script.js'></script>
 </body>
+
+</html>
+
