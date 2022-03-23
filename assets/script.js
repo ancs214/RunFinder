@@ -66,7 +66,13 @@ userFormEl.addEventListener("submit", formSubmitHandler)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //pass in zip code to getRaces function
 =======
 //pass in zip code to getRaces function
 >>>>>>> bbf34a34b2340ce6122c128e5d3a09458e4b7a24
+=======
+
+//pass in zip code to getRaces function
+
+>>>>>>> 0762165019d89af94755e4568fbec4b374a8fe2f
