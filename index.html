@@ -5,59 +5,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
 </head>
 
 <body>
+        <nav class="navbar level">
+                <div class="nav-left">
+                    <a href="#" class="nav-item">
+                        <h1 class="title is-4">RunFinder</h1>
+                    </a>
+                </div>
+
+                <!-- <div class="nav-center">
+                    <a href="https://github.com/ancs214/RunFinder" class="nav-item">
+                    <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                </a>
+            </div> -->
+
+                <div class="navbar-item">
+                    <a href="#" class="nav-item">About Us</a>
+                </div>
+            </nav>
+        </div>
+
     <header>
-        <div>
             <div>
                 <h1>WEBSITE NAME</h1>
             </div>
-
             <div>
-                <nav>Nav links</nav>
+                <nav> Nav links</nav>
             </div>
-        </div>
     </header>
 
     <section>
-        <div>
-            <div>
-                <h2>Search by zipcode:</h2>
-                <form id="user-form">
-                    <input type="text" id="race-search" />
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-            <div></div>
+            
+        <div class="block" style="width: 40%;">
+            <h2>Search by zipcode:</h2>
+            <form id="user-form" class="level">
+                <input class="input" placeholder="Enter Zipcode" type="text" id="race-search">
+                <button class="button is-primary" type="submit">Search</button>
+            </form>
         </div>
     </section>
 
-    <main>
-        <div>
-            <div>
+    <main class="columns tile is-parent">
+        <div class="column tile is-child is-primary">
+            <div class="level">
+            <div class="level-item">
                 <h2>Run Results</h2>
             </div>
-            <div id="results"></div>
-        </div>
-        <div>
-            <div>
-                <h2>weather Results</h2>
+            <div class="level-item">
+                <h2>Weather Results</h2>
+          <div class="block columns tile is-parent">
+            <div class="box columns tile is-child">
+                <div id="results">
+
+                </div>
             </div>
 
-            <div>
-                <p>weather card</p>
+            <div class="box columns tile is-child">
+
             </div>
+
         </div>
     </main>
 
-    <footer></footer>
+              <div class="container">
 
-    <!-- had to move script to bottom of page; it was causing >6 second load times after user search -->
-    <script src="assets/script.js"></script>
+     
+        <div class="block">
+
+
+      
+
+          
+    </div>
+
+
+   
+    <script src='./assets/script.js'></script>
 </body>
-
 
 </html>
 
