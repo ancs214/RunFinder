@@ -5,7 +5,7 @@ let raceSearchEl = document.querySelector("#race-search");
 
 let getRaces = function(searchInput) {
     //modify apiUrl to include zipcode search input
-    let apiUrl = "https://cors-anywhere.herokuapp.com/https://runsignup.com/Rest/races?format=json&events=T&race_headings=T&race_links=T&include_waiver=F&include_multiple_waivers=F&include_event_days=T&include_extra_date_info=F&page=2&results_per_page=10&sort=date+ASC&start_date=today&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&country=US&event_type=running_race&distance_units=K&zipcode=" + searchInput + "&radius=50";
+    let apiUrl = "https://cors-anywhere.herokuapp.com/https://runsignup.com/Rest/races?format=json&events=T&race_headings=T&race_links=T&include_waiver=F&include_multiple_waivers=F&include_event_days=T&include_extra_date_info=F&page=2&results_per_page=1&sort=date+ASC&start_date=today&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&country=US&event_type=running_race&distance_units=K&zipcode=" + searchInput + "&radius=50";
     fetch(apiUrl)
         .then(function(response) {
             console.log(response);
@@ -63,16 +63,3 @@ let formSubmitHandler = function(event) {
 
 //on form submit, run formSubmitHandler function to obtain zip code
 userFormEl.addEventListener("submit", formSubmitHandler)
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-//pass in zip code to getRaces function
-=======
-//pass in zip code to getRaces function
->>>>>>> bbf34a34b2340ce6122c128e5d3a09458e4b7a24
-=======
-
-//pass in zip code to getRaces function
-
->>>>>>> 0762165019d89af94755e4568fbec4b374a8fe2f
