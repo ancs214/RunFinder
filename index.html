@@ -20,7 +20,7 @@
             <nav class="navbar level">
                 <div class="nav-left">
                     <a href="#" class="nav-item">
-                        <h1 class="title is-4">RunFinder</h1>
+                        <h1 class="title is-4">Run N Chug</h1>
                     </a>
                 </div>
 
@@ -39,9 +39,10 @@
         </div>
 
         <div class="block" style="width: 40%;">
-            <h2>Search by zipcode:</h2>
+            <h2>Search by City/State:</h2>
             <form id="user-form" class="level">
-                <input class="input" placeholder="Enter Zipcode" type="text" id="race-search">
+                <input class="input" placeholder="Enter City" type="text" id="race-city-search" required>
+                <input class="input" placeholder="Enter State" type="text" id="race-state-search" required>
                 <button class="button is-primary" type="submit">Search</button>
             </form>
         </div>
@@ -51,7 +52,7 @@
                 <h2>Run Results</h2>
             </div>
             <div class="level-item">
-                <h2>Weather Results</h2>
+                <h2>Brewery Results</h2>
             </div>
         </div>
 
@@ -64,6 +65,9 @@
             </div>
 
             <div class="box columns tile is-child">
+                <div id="beer-results">
+
+                </div>
 
             </div>
 
