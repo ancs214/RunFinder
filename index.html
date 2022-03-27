@@ -5,19 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body style="background-image: url('./assets/images/1__4_.0.webp'); background-repeat: no-repeat;" class="container">
-    <div class="container" style="width: 90%; background-color: rgb(240, 248, 255, 0.7);">
-
+<body style="
+      background-image: url('./assets/images/1__4_.0.webp');
+      background-repeat: no-repeat;
+    " class="container">
+    <div class="container" style="width: 90%; background-color: rgb(240, 248, 255, 0.7)">
         <!-- NAVBAR -->
         <div class="block">
-
-            <nav class="navbar level p-5" id="nav" style="background-color: rgb(240, 248, 255, 0.7);">
+            <nav class="navbar level p-5" id="nav" style="background-color: rgb(240, 248, 255, 0.7)">
                 <div class="nav-left">
                     <a href="#" class="nav-item">
                         <h1 class="title pl-4 mt-5">Run&Chug</h1>
@@ -34,11 +35,11 @@
                 </div> -->
                 <div class="navbar-item">
                     <button class="button is-large">
-                        <span class="icon is-medium">
-                            <i class="fa fa-github"></i>
-                        </span>
-                        <span>GitHub</span>
-                    </button>
+              <span class="icon is-medium">
+                <i class="fa fa-github"></i>
+              </span>
+              <span>GitHub</span>
+            </button>
                 </div>
 
                 <div class="navbar-item">
@@ -51,47 +52,37 @@
             <!-- Search Box-->
             <div class="block">
                 <!-- <h2 class="box m-0 p-0 pl-3">Search by City/State:</h2> -->
-                <h2 class="has-text-white p-5"
-                    style="background-color: rgba(175, 16, 16, 0.8); font-weight: bold; font-size: larger;">Search by
-                    City/State:</h2>
+                <h2 class="has-text-white p-5 header">Search by City/State:</h2>
                 <form id="user-form" class="level">
-                    <input class="input" placeholder="Enter City" type="text" id="race-city-search">
-                    <input class="input" placeholder="Enter State" type="text" id="race-state-search">
+                    <input class="input" placeholder="Enter City" type="text" id="race-city-search" />
+                    <input class="input" placeholder="Enter State" type="text" id="race-state-search" />
                     <button class="button is-success" type="submit">Search</button>
                 </form>
             </div>
 
-
             <!-- Results -->
-            <div class="level">
-                <div class="level-item">
-                    <h2 class="has-text-white p-5" id="results"
-                        style="background-color: rgba(175, 16, 16, 0.8); font-weight: bold; font-size: larger;">Run
-                        Results</h2>
+            <div class="level width-max">
+                <div class="level-item width-half">
+                    <h2 class="has-text-white p-5 header">Run Results</h2>
                 </div>
-                <div class="level-item">
-                    <h2 class="has-text-white p-5" id="beer-results"
-                        style="background-color: rgba(175, 16, 16, 0.8); font-weight: bold; font-size: larger;">Local
-                        Breweries</h2>
+                <div class="level-item width-half">
+                    <h2 class="has-text-white p-5 header">Local Breweries</h2>
                 </div>
             </div>
-
 
             <div class="block columns tile is-parent">
                 <div class="box column tile is-child">
-                    <div id="results">
-
-                    </div>
+                    <div id="results" class="has-background-light"></div>
                 </div>
 
-                <div class="box column tile is-child">
-
+                <div class="box column tile is-child has-text-light">
+                    <div id="beer-results"></div>
                 </div>
-
             </div>
         </div>
-
     </div>
     <!-- had to move script to bottom of page; it was causing >6 second load times after user search -->
-    <script src='./assets/script.js'></script>
+    <script src="./assets/script.js "></script>
 </body>
+
+</html>
