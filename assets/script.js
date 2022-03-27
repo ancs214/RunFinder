@@ -8,7 +8,7 @@ let raceZipSearch = document.querySelector("#race-zip-search");
 stateList = {
     'arizona': 'AZ',
     'alabama': 'AL',
-    'alaska':'AK',
+    'alaska': 'AK',
     'arkansas': 'AR',
     'california': 'CA',
     'colorado': 'CO',
@@ -55,8 +55,9 @@ stateList = {
     'washington': 'WA',
     'west virginia': 'WV',
     'wisconsin': 'WI',
-    'wyoming': 'WY'}
-    
+    'wyoming': 'WY'
+}
+
 
 
 
@@ -87,21 +88,21 @@ let getRaces = function(citySearch, stateSearch) {
 let getBeer = function(citySearch, stateSearch) {
     //plug in city and state search to fetch request
     fetch("https://api.openbrewerydb.org/breweries?by_city=" + citySearch + "&by_state=" + stateSearch + "&per_page=10")
-    .then(function(response) {
-        if (response.ok) {
-            response.json()
-            .then(function(data) {
-                displayBreweries(data);
-            })
-        }
-    })
+        .then(function(response) {
+            if (response.ok) {
+                response.json()
+                    .then(function(data) {
+                        displayBreweries(data);
+                    })
+            }
+        })
 }
 
 
 //function to display breweries
 let displayBreweries = function(data) {
-    
-    for (i = 0; i < data.length; i ++) {
+
+    for (i = 0; i < data.length; i++) {
         //create div container for brewery name results
         let breweryNamesContainer = document.createElement("div");
         //create div for each result
@@ -109,10 +110,32 @@ let displayBreweries = function(data) {
         //add names and url links to div
         breweryNames.innerHTML = data[i].name;
         breweryNames.setAttribute("href", data[i].website_url)
-        //append div to container
+            //opens links in a new tab
+        breweryNames.setAttribute('target', 'blank_')
+            //adds css class
+        breweryNames.classList.add('api-results')
+            //append div to container
         breweryNamesContainer.appendChild(breweryNames);
         //append to page
         beerResultsEl.appendChild(breweryNamesContainer);
+
+        function mOut() {
+            beerResultsEl.classList.add('animate__animated')
+            beerResultsEl.classList.add('animate__lightSpeedInRight')
+        }
+
+        function mOver() {
+            beerResultsEl.classList.add('animate__animated')
+            beerResultsEl.classList.add('animate__lightSpeedInRight')
+        }
+        // adds class to clicked links
+        function mClick() {
+            breweryNames.classList.add('clicked-link')
+        }
+
+        breweryNames.addEventListener('mouseover', mOver)
+        breweryNames.addEventListener('mouseout', mOut)
+        breweryNames.addEventListener('click', mClick)
     }
 }
 
@@ -131,17 +154,44 @@ function resetResults() {
 
 //function to display race events
 let displayRaces = function(data) {
-        
-        for (let i = 0; i < data.races.length; i++) {
-            let name = data.races[i].race.name;
-            let raceNames = document.createElement("div");
-            let raceLinks = document.createElement("a");
-            raceLinks.innerHTML = name;
-            raceLinks.setAttribute("href", data.races[i].race.url);
-            raceNames.appendChild(raceLinks);
-            resultsEl.appendChild(raceNames);
+
+    for (let i = 0; i < data.races.length; i++) {
+        let name = data.races[i].race.name;
+        let raceNames = document.createElement("div");
+        let raceLinks = document.createElement("a");
+        raceLinks.innerHTML = name;
+        raceLinks.setAttribute("href", data.races[i].race.url);
+        //opens link in new tab
+        raceLinks.setAttribute('target', 'blank_')
+
+        raceLinks.classList.add('api-results')
+
+
+        raceNames.appendChild(raceLinks);
+        resultsEl.appendChild(raceNames);
+        // functions to add animation css with mouse hover event
+        function mOut() {
+            resultsEl.classList.add('animate__animated')
+            resultsEl.classList.add('animate__lightSpeedInRight')
         }
+
+        function mOver() {
+            resultsEl.classList.add('animate__animated')
+            resultsEl.classList.add('animate__lightSpeedInRight')
+        }
+
+        function mClick() {
+            raceLinks.classList.add('clicked-link')
+        }
+
+        raceLinks.addEventListener('mouseover', mOver)
+        raceLinks.addEventListener('mouseout', mOut)
+        raceLinks.addEventListener('click', mClick)
+
+
+
     }
+}
 
 
 
@@ -165,9 +215,7 @@ let formSubmitHandler = function(event) {
 }
 
 
-    
+
 
 //on form submit, run formSubmitHandler function to obtain zip code
 userFormEl.addEventListener("submit", formSubmitHandler)
-
-
