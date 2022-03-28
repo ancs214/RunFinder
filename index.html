@@ -15,10 +15,10 @@
       background-image: url('./assets/images/1__4_.0.webp');
       background-repeat: no-repeat;
     " class="container">
-    <div class="container" style="width: 90%; background-color: rgb(240, 248, 255, 0.7)">
+    <div class="container" style="width: 90%;">
         <!-- NAVBAR -->
         <div class="block">
-            <nav class="navbar level p-5" id="nav" style="background-color: rgb(240, 248, 255, 0.7)">
+            <nav class="navbar level p-5" id="nav" style="background-color: rgb(240, 248, 255, 0.7);">
                 <div class="nav-left">
                     <a href="#" class="nav-item">
                         <h1 class="title pl-4 mt-5"><a href="index.html" class="has-text-black">Run&Chug</a></h1>
@@ -42,34 +42,36 @@
                 </div>
             </nav>
 
-            <!-- Search Box-->
-            <div class="block">
-                <!-- <h2 class="box m-0 p-0 pl-3">Search by City/State:</h2> -->
-                <h2 class="has-text-white p-5 header">Search by City/State:</h2>
-                <form id="user-form" class="level">
-                    <input class="input" placeholder="Enter City" type="text" id="race-city-search" />
-                    <input class="input" placeholder="Enter State" type="text" id="race-state-search" />
-                    <button class="button is-success" type="submit">Search</button>
-                </form>
-            </div>
-
-            <!-- Results -->
-            <div class="level width-max">
-                <div class="level-item width-half">
-                    <h2 class="has-text-white p-5 header">Run Results</h2>
-                </div>
-                <div class="level-item width-half">
-                    <h2 class="has-text-white p-5 header">Local Breweries</h2>
-                </div>
-            </div>
-
-            <div class="block columns tile is-parent">
-                <div class="box column tile is-child">
-                    <div id="results" class="has-background-light"></div>
+            <div style="background-color: rgb(240, 248, 255, 0.7);">
+                <!-- Search Box-->
+                <div class="block">
+                    <!-- <h2 class="box m-0 p-0 pl-3">Search by City/State:</h2> -->
+                    <h2 class="has-text-white p-5 header">Search by City/State:</h2>
+                    <form id="user-form" class="level">
+                        <input class="input" placeholder="Enter City" type="text" id="race-city-search" />
+                        <input class="input" placeholder="Enter State" type="text" id="race-state-search" />
+                        <button class="button is-success" type="submit">Search</button>
+                    </form>
                 </div>
 
-                <div class="box column tile is-child">
-                    <div id="beer-results" class="has-background-light"></div>
+                <!-- Results -->
+                <div class="level width-max">
+                    <div class="level-item width-half">
+                        <h2 class="has-text-white p-5 header">Run Results</h2>
+                    </div>
+                    <div class="level-item width-half">
+                        <h2 class="has-text-white p-5 header">Local Breweries</h2>
+                    </div>
+                </div>
+
+                <div class="block columns tile is-parent">
+                    <div class="box column tile is-child">
+                        <div id="results" class="has-background-light p-0"></div>
+                    </div>
+
+                    <div class="box column tile is-child">
+                        <div id="beer-results" class="has-background-light p-0"></div>
+                    </div>
                 </div>
             </div>
         </div>
