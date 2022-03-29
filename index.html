@@ -25,14 +25,6 @@
                     </a>
                 </div>
 
-                <!-- <div class="navbar-item">
-                    <a href="https://github.com/ancs214/RunFinder" class="nav-item">
-                        <span class="icon">
-                            <i class="fa fa-github has-text-black" style="font-size:36px"></i>
-                        </span>
-                        <span>Github</span>
-                    </a>
-                </div> -->
                 <div class="navbar-item">
                     <button class="button is-large">
               <span class="icon is-medium">
@@ -43,46 +35,58 @@
                 </div>
 
                 <div class="navbar-item">
-                    <a href="#" class="nav-item has-text-black p-5">Home</a>
-                    <a href="#" class="nav-item has-text-black p-5">Contact</a>
-                    <a href="#" class="nav-item has-text-black p-5">About Us</a>
-                </div>
-            </nav>
+                    <a href="index.html" class="nav-item has-text-black p-5">Home</a>
+                    <a href="contact.html" class="nav-item has-text-black p-5">Contact</a
+            >
+            <a href="aboutUs.html" class="nav-item has-text-black p-5"
+              >About Us</a
+            >
+          </div>
+        </nav>
 
-            <!-- Search Box-->
-            <div class="block">
-                <!-- <h2 class="box m-0 p-0 pl-3">Search by City/State:</h2> -->
-                <h2 class="has-text-white p-5 header">Search by City/State:</h2>
-                <form id="user-form" class="level">
-                    <input class="input" placeholder="Enter City" type="text" id="race-city-search" />
-                    <input class="input" placeholder="Enter State" type="text" id="race-state-search" />
-                    <button class="button is-success" type="submit">Search</button>
-                </form>
-            </div>
-
-            <!-- Results -->
-            <div class="level width-max">
-                <div class="level-item width-half">
-                    <h2 class="has-text-white p-5 header">Run Results</h2>
-                </div>
-                <div class="level-item width-half">
-                    <h2 class="has-text-white p-5 header">Local Breweries</h2>
-                </div>
-            </div>
-
-            <div class="block columns tile is-parent">
-                <div class="box column tile is-child">
-                    <div id="results" class="has-background-light"></div>
-                </div>
-
-                <div class="box column tile is-child has-text-light">
-                    <div id="beer-results"></div>
-                </div>
-            </div>
+        <!-- Search Box-->
+        <div class="block">
+          <!-- <h2 class="box m-0 p-0 pl-3">Search by City/State:</h2> -->
+          <h2 class="has-text-white p-5 header">Search by City/State:</h2>
+          <form id="user-form" class="level">
+            <input
+              class="input"
+              placeholder="Enter City"
+              type="text"
+              id="race-city-search"
+            />
+            <input
+              class="input"
+              placeholder="Enter State"
+              type="text"
+              id="race-state-search"
+            />
+            <button class="button is-success" type="submit">Search</button>
+          </form>
         </div>
+
+        <!-- Results -->
+        <div class="level width-max">
+          <div class="level-item width-half">
+            <h2 class="has-text-white p-5 header">Run Results</h2>
+          </div>
+          <div class="level-item width-half">
+            <h2 class="has-text-white p-5 header">Local Breweries</h2>
+          </div>
+        </div>
+
+        <div class="block columns tile is-parent">
+          <div class="box column tile is-child">
+            <div id="results" class="has-background-light"></div>
+          </div>
+
+          <div class="box column tile is-child has-text-light">
+            <div id="beer-results"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- had to move script to bottom of page; it was causing >6 second load times after user search -->
     <script src="./assets/script.js "></script>
-</body>
-
+  </body>
 </html>
