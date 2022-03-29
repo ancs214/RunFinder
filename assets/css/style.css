@@ -1,0 +1,34 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+#github-btn:hover{
+    background-color: rgb(113, 110, 110);
+}
+#home:hover{
+    background-color: rgb(113, 110, 110);
+}
+#contact:hover{
+    background-color: rgb(113, 110, 110);
+}
+#about-us:hover{
+    background-color: rgb(113, 110, 110);
+}
+.header {
+    background-color: rgba(54.5%, 27.06%, 7.45%, 0.8);
+    font-weight: bold;
+    font-size: larger;
+}
+
+.api-results {
+    font-size: 20px;
+    color: saddlebrown;
+    border-bottom: 2px dashed black;
+}
+
+.clicked-link {
+    text-decoration-line: line-through;
+}
