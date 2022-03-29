@@ -1,9 +1,14 @@
-#Run and Chug Finder
+# Run and Chug
 
-##Run and Chug Finder is a website designed for users to locate race events such as marathons, half- marathons, 5ks and other race events in a specified city- as well providing info on nearby brewers in that area- users may be thirsty after a run!
+## PLEASE REQUEST ACCESS TO CORS SERVER TO FULLY UTILIZE THIS APPLICATION
 
-###Run and Chug Finder is an html based projected that utilizes BULMA CSS framework, and third-party APIs; RunSignUp and Open Brewery DB.
+## https://cors-anywhere.herokuapp.com/corsdemo
+
+## Run and Chug is a website designed for users to locate race events such as marathons, half- marathons, 5ks and other race events in a specified city- as well providing info on nearby brewers in that area- users may be thirsty after a run!
+
+### Run and Chug is an html based projected that utilizes BULMA CSS framework, and third-party APIs; RunSignUp and Open Brewery DB.
 API links
+
 https://runsignup.com/API
 
 https://www.openbrewerydb.org/
@@ -20,6 +25,10 @@ One of our original concepts was to include a weather forecast for queried race 
 
 ![image](https://user-images.githubusercontent.com/96699842/160510493-a3fad2db-7f06-4f57-8745-61b4248fa659.png)
 
-GitHub
+## GitHub
 
 https://github.com/ancs214/RunFinder
+
+## Live application link
+
+https://ancs214.github.io/RunFinder/
